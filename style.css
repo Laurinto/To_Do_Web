@@ -1,3 +1,139 @@
-input :invalid{
-    background-color: #f1b0b0;
+:root{
+    --cl-background: #fff;
+    --cl-text: #1c1c1c;
+    --cl-button-hover: #a2a2a0;
 }
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --cl-background: #1c1c1c;
+        --cl-text: #fff;
+        --cl-button-hover: #a2a2a0;
+    }
+}
+
+*{
+    font-family: "Chilanka", serif;
+    color: var(--cl-text);
+    /*border: 1px solid #880000; --> just to set sizes*/ /*THIS IS TEMPORAL, REMEMBER*/
+}
+
+html, body{
+    all: unset;
+    margin: 0 20%; /*at 768px -> 10%  and at 425px -> 5% (?)*/
+    hr{border: 1px solid var(--cl-text); margin: 0;}
+    background: var(--cl-background);
+}
+
+body > header{
+    text-align: center;
+    padding: 0 10%;
+    h1{font-size: 8em;}
+    p{font-size: 2.5em;}
+    margin: 5% 0 5%;
+}
+
+main{
+    margin: 5% 0 5%;
+}
+
+.new-list{
+    margin: 5% 0 0;
+}
+
+footer{
+    margin: 5% 0 0;
+    border: 2px 0 0 solid var(--cl-text);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+}
+
+.start{
+    all: unset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    /* grid-template-rows: repeat(2, 1fr); -------> remember that you need to write in js to detect the number of*/
+}
+
+.login{
+    border: 2px solid var(--cl-text);
+    border-radius: 1em;
+    padding: 2%;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2%;
+    h3{margin: 0;}
+}
+
+.input-container{
+    border: 2px solid var(--cl-text);
+    border-radius: 1em;
+    padding: 1%;
+    width: auto;
+    display: grid;
+    align-items: center
+}
+
+input{
+    all: unset;
+    height: 2em;
+    width: 100%;
+}
+
+.login-button{
+    width: 8em;
+    height: calc(2em + 2%);
+}
+
+.login-button-container{
+    p{margin: 0; font-size: 0.75em;}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+/*-----------------------------------*/
+
+button{ /*the text is temporal,is to have reference of button`s meaning */
+    all: unset;
+    border: 2px solid var(--cl-text);
+    border-radius: 1em;
+    width: 5em; /*clamp() <-- used to set a min and max width*/
+    height: 2em;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover{
+    border-color: #4e4e4e;
+    color: #4e4e4e;
+}
+
+
+
+.checkbox{
+    border-radius: 0.3em;
+    width: 2em;
+}
+
+.lista-cre-cre{
+    border: 2px solid var(--cl-text);
+    border-radius: 1em;
+}
+
+.new-list{
+    border: 2px solid var(--cl-text);
+    border-radius: 1em;
+}
+
+/*input :invalid{
+    background-color: #f1b0b0;
+}*/
+
+
+/*--------------------*/
